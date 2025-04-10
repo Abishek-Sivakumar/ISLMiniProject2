@@ -10,7 +10,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./js");
   eleventyConfig.addPassthroughCopy("./utils");
   eleventyConfig.addPassthroughCopy("favicons"); // if you store them in a folder
-
   eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/cdn.js": "./js/alpine.js",
   });
