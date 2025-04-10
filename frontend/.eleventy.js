@@ -1,7 +1,7 @@
 module.exports = function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy("./styles.css");
   eleventyConfig.addPassthroughCopy({
-    "node_modules/flowbite/dist/flowbite.js": "js/flowbite.js"
+    "node_modules/flowbite/dist/flowbite.js": "js/flowbite.js",
   });
   eleventyConfig.addPassthroughCopy("./assets");
   eleventyConfig.addPassthroughCopy("./sw.js");
@@ -9,10 +9,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy(".well-known");
   eleventyConfig.addPassthroughCopy("./js");
   eleventyConfig.addPassthroughCopy("./utils");
+  eleventyConfig.addPassthroughCopy("favicons"); // if you store them in a folder
+
   eleventyConfig.addPassthroughCopy({
-    "./node_modules/alpinejs/dist/cdn.js": "./js/alpine.js"
+    "./node_modules/alpinejs/dist/cdn.js": "./js/alpine.js",
   });
   return {
-    passthroughFileCopy: true
+    passthroughFileCopy: true,
   };
 };
