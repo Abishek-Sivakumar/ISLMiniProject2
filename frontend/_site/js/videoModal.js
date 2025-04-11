@@ -10,7 +10,7 @@ let start = 0;
 const pageSize = 12;
 
 // Load video data from local JSON
-fetch("/videos.json")
+fetch("/app/alphabetSong/videos.json")
   .then((res) => res.json())
   .then((data) => {
     videoData = data.map((vid) => ({

@@ -34,8 +34,9 @@
     {# videos #}
     {% import 'components/videoCards.njk' as macro %}
 <section id="paginated-video" class="flex justify-center align-center flex-wrap max-w-screen-xl mx-auto mt-10 gap-4">
+    {% import 'components/videoCards.njk' as macro %}
     {% for video in videos %}
-        {{ macro.videoCard(video.thumbnail, video.title, video.videoUrl, video.date, video.duration) }}
+        {{ macro.videoCard(video.thumbnail, video.title, video.URL, video.uploadDate, video.duration) }}
     {% endfor %}
 </section>
 

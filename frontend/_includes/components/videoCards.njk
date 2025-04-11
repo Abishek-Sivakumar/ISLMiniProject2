@@ -1,15 +1,15 @@
 {% macro videoCard(thumbnail, title, videoUrl, date, duration) %}
-<div id="card" url={{videoUrl}} class="w-[80vw] md:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+<div id="card" url={{ videoUrl }} class="w-[80vw] md:max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
     <div>
-        <img class="rounded-t-lg w-full" src="{{thumbnail}}" alt="{{title}}" />
+        <img class="rounded-t-lg w-full" src="{{ thumbnail }}" alt="{{ title }}" />
     </div>
     <div class="p-5">
         <a href="#">
             <h5 class="mb-2 text-2xl font-bold tracking-tight capitalize text-gray-900 dark:text-white">
-                {{title}}
+                {{ title }}
             </h5>
         </a>
-        <p class="text-sm text-gray-400 mt-2">📅 {{ date }} • ⏱ {{ duration }}</p>
+        <p class="text-sm text-gray-400 mt-2">📅 {{ date }} • ⏱ {{ duration }} sec</p>
     </div>
 </div>
 {% endmacro %}
